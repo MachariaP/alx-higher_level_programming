@@ -5,8 +5,8 @@ import random
 # Step 1: Generate a random number
 number = random.randint(-10000, 10000)
 
-# Step 2: Get the last digit
-last_digit = (number) % 10
+# Step 2: Get the last digit with the correct sign
+last_digit = abs(number) % 10 * (-1 if number < 0 else 1)
 
 # Step 3: Print the result
 print("Last digit of", number, "is", last_digit, "and is", end=" ")
