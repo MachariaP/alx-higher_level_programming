@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from sys import argv
+import sys
 
 # Step 1: Get the Number of Arguments
 num_args = len(argv) - 1  # Exclude the script name
