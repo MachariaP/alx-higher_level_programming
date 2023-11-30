@@ -17,4 +17,3 @@ if __name__ == "__main__":
     # Step 3: Print the Arguments
     for i in range(num_args):
         print(f"{i + 1}: {argv[i + 1]}")
-
