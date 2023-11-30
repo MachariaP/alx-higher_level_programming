@@ -14,6 +14,6 @@ else:
     print(f"{num_args} arguments:")
 
 # Step 3: Print the Arguments
-for i, arg in enumerate(argv[1:], start=1):
+for i in range(num_args):
     print(f"{i}: {arg}")
 
