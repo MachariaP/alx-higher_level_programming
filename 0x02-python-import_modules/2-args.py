@@ -15,5 +15,5 @@ else:
 
 # Step 3: Print the Arguments
 for i in range(num_args):
-    print(f"{i}: {arg}")
+    print(f"{i + 1}: {sys.argv[i + 1]}")
 
