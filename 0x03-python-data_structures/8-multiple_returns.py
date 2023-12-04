@@ -16,4 +16,3 @@ def multiple_returns(sentence):
     else:
         # Return None for the first character if the string is empty
         return len(sentence), None
-
