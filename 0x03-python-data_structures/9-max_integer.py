@@ -10,4 +10,8 @@ def max_integer(my_list=[]):
         biggest integer
     """
 
-    return (max(my_list) if my_list else None)
+    if len(my_list) < 1:
+        return None
+    list_copy = my_list.copy()
+    list_copy.sort()
+    return list_copy[-1]
