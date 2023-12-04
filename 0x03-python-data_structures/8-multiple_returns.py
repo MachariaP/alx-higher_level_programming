@@ -3,10 +3,8 @@
 def multiple_returns(sentence):
     """
     Returns a pair with the length of a string and its first character.
-    
     Args:
         sentence: Input string.
-        
     Returns:
         A pair containing the length of the string and its first character.
     """
