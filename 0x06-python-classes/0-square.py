@@ -1,15 +1,7 @@
 #!/usr/bin/python3
 
+"""square Module"""
+
 class Square:
-    """
-    This is the Square class.
-
-    It is currently empty and can be used as a template for defining a square.
-
-    Attributes:
-        None
-
-    Methods:
-        None
-    """
+    """Defines a square class"""
     pass
