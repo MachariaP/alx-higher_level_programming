@@ -7,7 +7,6 @@ class Rectangle that defines a rectangle
 
 
 class Rectangle:
+    """Models a Rectangle"""
 
     pass
-
-r = Rectangle()
