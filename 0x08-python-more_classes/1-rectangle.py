@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""
+Rectangle Module
 
+A module that models a Rectangle
+"""
 
 class Rectangle:
     """Defines rectangle"""
