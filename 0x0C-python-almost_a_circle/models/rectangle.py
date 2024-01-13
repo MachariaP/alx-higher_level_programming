@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module class Rectangle"""
+""Module class Rectangle"""
 
 
 from models.base import Base
@@ -24,10 +24,7 @@ class Rectangle(Base):
             y (int, optional): Y-coordinate of the rectangle (default is 0).
             id (int, optional): Unique identifier (default is None).
         """
-        # Call the constructor of the Base class with the provided id.
         super().__init__(id)
-
-        # Assign the provided values to the corresponding attributes.
         self.width = width
         self.height = height
         self.x = x
@@ -41,7 +38,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter method for width."""
-        # Setter allows validation or additional logic before assigning the value.
+        self.validate_positive_integer("width", value)
         self.__width = value
 
     @property
@@ -52,7 +49,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter method for height."""
-        # Setter allows validation or additional logic before assigning the value.
+        self.validate_positive_integer("height", value)
         self.__height = value
 
     @property
@@ -63,7 +60,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter method for x."""
-        # Setter allows validation or additional logic before assigning the value.
+        self.validate_non_negative_integer("x", value)
         self.__x = value
 
     @property
@@ -74,6 +71,19 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter method for y."""
-        # Setter allows validation or additional logic before assigning the value.
+        self.validate_non_negative_integer("y", value)
         self.__y = value
 
+    def validate_positive_integer(self, attribute_name, value):
+        """Validate that the value is a positive integer."""
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        elif value <= 0:
+            raise ValueError(f"{attribute_name} must be > 0")
+
+    def validate_non_negative_integer(self, attribute_name, value):
+        """Validate that the value is a non-negative integer."""
+        if not isinstance(value, int):
+            raise TypeError(f"{attribute_name} must be an integer")
+        elif value < 0:
+            raise ValueError(f"{attribute_name} must be >= 0")
