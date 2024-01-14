@@ -96,3 +96,16 @@ class Rectangle(Base):
 
         for _ in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        Returns string info about the rectangle
+        """
+
+        return '[{}] ({}) {}/{} - {}/{}'.format(
+                type(self).__name__,
+                self.id,
+                self.x,
+                self.y,
+                self.width,
+                self.height)
