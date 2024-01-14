@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""Module for Rectangle class"""
-
+"""Module for Rectangle class"""
 
 from models.base import Base
 
@@ -75,10 +74,9 @@ class Rectangle(Base):
         self.__y = value
 
     def validate_integer(self, name, value, positive=True):
-        """ Method for validating all setter methods and instantiation"""
+        """Method for validating all setter methods and instantiation"""
 
-
-        if not isinstance(value, int) or isinstance(value, bool):
+        if not isinstance(value, (int, bool)):
             raise TypeError("{} must be an integer".format(name))
         if positive and value < 0:
             raise ValueError("{} must be >= 0".format(name))
