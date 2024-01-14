@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""Module class Rectangle"""
+""Module for Rectangle class"""
 
 
 from models.base import Base
@@ -38,7 +38,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Setter method for width."""
-        self.validate_positive_integer("width", value)
+        self.validate_integer("width", value, False)
         self.__width = value
 
     @property
@@ -49,7 +49,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter method for height."""
-        self.validate_positive_integer("height", value)
+        self.validate_integer("height", value, False)
         self.__height = value
 
     @property
@@ -60,7 +60,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Setter method for x."""
-        self.validate_non_negative_integer("x", value)
+        self.validate_integer("x", value)
         self.__x = value
 
     @property
@@ -71,19 +71,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Setter method for y."""
-        self.validate_non_negative_integer("y", value)
+        self.validate_integer("y", value)
         self.__y = value
 
-    def validate_positive_integer(self, attribute_name, value):
-        """Validate that the value is a positive integer."""
-        if not isinstance(value, int):
-            raise TypeError(f"{attribute_name} must be an integer")
-        elif value <= 0:
-            raise ValueError(f"{attribute_name} must be > 0")
+    def validate_integer(self, name, value, positive=True):
+        """ Method for validating all setter methods and instantiation"""
 
-    def validate_non_negative_integer(self, attribute_name, value):
-        """Validate that the value is a non-negative integer."""
-        if not isinstance(value, int):
-            raise TypeError(f"{attribute_name} must be an integer")
-        elif value < 0:
-            raise ValueError(f"{attribute_name} must be >= 0")
+
+        if not isinstance(value, int) or isinstance(value, bool):
+            raise TypeError("{} must be an integer".format(name))
+        if positive and value < 0:
+            raise ValueError("{} must be >= 0".format(name))
+        elif not positive and value <= 0:
+            raise ValueError("{} must be > 0".format(name))
