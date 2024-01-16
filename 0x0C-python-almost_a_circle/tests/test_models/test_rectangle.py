@@ -1,7 +1,7 @@
+###This module needs to be revised
+
 #!/usr/bin/python3
-"""
-<test_rectangle.py>
-Defines unittests for models/rectangle.py.
+"""Defines unittests for models/rectangle.py.
 
 Unittest classes:
     TestRectangle_instantiation - line 25

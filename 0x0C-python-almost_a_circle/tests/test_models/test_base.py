@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-<test_base.py>
-Defines unittests for base.py.
-
-Unittest classes:
+"""Unittest classes:
     TestBase_instantiation - line 23
     TestBase_to_json_string - line 110
     TestBase_save_to_file - line 156
@@ -545,7 +541,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
