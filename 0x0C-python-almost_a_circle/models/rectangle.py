@@ -3,6 +3,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class inherits from Base.
 
@@ -127,8 +128,8 @@ class Rectangle(Base):
         """Convert Rectangle instance to dictionary."""
 
         return {
-                'x' : self.x,
-                'y' : self.y,
+                'x': self.x,
+                'y': self.y,
                 'id': self.id,
                 'height': self.height,
                 'width': self.width
