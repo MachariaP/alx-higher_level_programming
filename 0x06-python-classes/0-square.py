@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-'''square Module'''
+"""square Module"""
 
 
-class square:
+class Square:
 
-    '''Defines a square class'''
+    """Defines a square class"""
     pass
