@@ -6,6 +6,7 @@ This script lists all states from the database `hbtn_0e_0_usa`.
 import MySQLdb
 from sys import argv
 
+
 def main():
     """
     Main function to access the database and retrieve the states.
@@ -26,6 +27,7 @@ def main():
     # Print each row
     for row in rows_selected:
         print(row)
+
 
 if __name__ == '__main__':
     # Call the main function when the script is executed
