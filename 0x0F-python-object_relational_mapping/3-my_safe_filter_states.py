@@ -19,9 +19,9 @@ if __name__ == "__main__":
     # Create a cursor object to execute SQL queries
     db_cursor = db_connect.cursor()
 
-    # Execute SQL query to retrieve states with a matching name and order them by state id
     db_cursor.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY %(name)s ORDER BY states.id ASC",
+        "SELECT * FROM states WHERE name LIKE BINARY %(name)s "
+        "ORDER BY states.id ASC",
         {'name': argv[4]}
     )
 
