@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-"""Script that fetches https://alx-intranet.hbtn.io/status."""
+"""Script that fetches https://alx-intranet.hbtn.io/status.
+"""
 
 import requests
 
@@ -10,5 +11,5 @@ if __name__ == "__main__":
     content = response.text
 
     print("Body response:")
-    print("\t- type: {}".format(type(content))
-    print("\t- content: {}".format(content))
+    print("\t- type:", type(content))
+    print("\t- content:", content)
