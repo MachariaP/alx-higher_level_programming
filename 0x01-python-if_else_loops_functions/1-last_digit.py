@@ -5,7 +5,7 @@ import random
 number = random.randint(-10000, 10000)
 
 # Determine the last digit of the number
-last_digit = number % 10 * (1 if number > 0 else -1)
+last_digit = abs(number) % 10 * (1 if number > 0 else -1)
 
 # Print the result
 print("Last digit of", number, "is", last_digit, "and is ", end="")
